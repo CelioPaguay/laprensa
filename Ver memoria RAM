@@ -1,0 +1,3 @@
+wmic memorychip get Capacity, Manufacturer, MemoryType, Speed, PartNumber
+
+wmic memphysical get MaxCapacity, MemoryDevices
