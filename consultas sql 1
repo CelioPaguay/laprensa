@@ -1,0 +1,33 @@
+-- ************************************************************************************************
+-- INVOICE
+-- ************************************************************************************************
+use kipudbfactory_COPIA1
+SELECT *
+FROM Invoice
+WHERE date BETWEEN '2024-08-03' AND '2024-08-25';
+
+-- sumar el total
+use kipudbfactory_COPIA1
+SELECT sum(iva) as iva, sum(total) as total, sum(deposit) as deposit, sum (residue) as residue
+FROM Invoice
+WHERE date BETWEEN '2024-08-03' AND '2024-08-25';
+--iva	1123,90	
+--total 12675,31	
+--deposit 6792,22	
+--residue 5883,09
+
+-- ************************************************************************************************
+-- PAYMENT
+-- ************************************************************************************************
+use kipudbfactory_COPIA1
+SELECT *
+FROM Payment
+WHERE date BETWEEN '2024-08-03' AND '2024-08-25';
+
+-- sumar el total
+use kipudbfactory_COPIA1
+SELECT sum(value) as value, sum(cash) as cash
+FROM Payment
+WHERE date BETWEEN '2024-08-03' AND '2024-08-25';
+--value 10912,53
+--cash 6868,04
